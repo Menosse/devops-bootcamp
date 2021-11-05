@@ -1,0 +1,16 @@
+version: '3'
+services:
+  jenkins:
+    container_name: jenkins-server
+    image: jenkins:bootcamp
+    build:
+      context: .
+    ports:
+      - "80:8080"
+    volumes:
+      - /home/ec2-user/jenkins-data/jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - net
+networks:
+  net:
