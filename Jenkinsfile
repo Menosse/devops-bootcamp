@@ -3,7 +3,7 @@ agent any
   stages {
     stage('fetch_latest_code') {
       steps {
-        git url: 'git@github.com:Menosse/devops-bootcamp.git', branch: 'main'
+        git url: 'https://github.com/Menosse/devops-bootcamp.git', branch: 'main'
       }
     }
 
