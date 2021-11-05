@@ -37,7 +37,7 @@ module "ec2_instance" {
   user_data              = file("./install_dependencies.sh")
   tags = {
     Terraform   = "true"
-    Environment = "dev"
+    Environment = "qa"
   }
 }
 
