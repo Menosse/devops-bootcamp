@@ -21,6 +21,7 @@ stages {
             if (params.TF_OPTION == 'apply' ) {
                 sh 'ls'
                 sh 'cd Vorx_ec2'
+                sh 'ls'
                 sh 'terraform init'
                 sh 'terraform plan -out=myplan.out'
             }
