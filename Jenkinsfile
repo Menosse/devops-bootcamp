@@ -16,6 +16,7 @@ stages {
   }
 
   stage('TF Init&Plan') {
+    dir('Vorx_ec2'){
     steps {
         script {
             if (params.TF_OPTION == 'apply' ) {
@@ -29,7 +30,8 @@ stages {
                 sh 'terraform plan -destroy -out=myplan.out '
             }
         }
-    }      
+      }
+    }
   }
 
   stage('Approval') {
