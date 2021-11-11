@@ -18,8 +18,9 @@ stages {
   stage('TF Init&Plan') {
     steps {
         script {
-            dir('Vorx_jenkins'){
+            
             if (params.TF_OPTION == 'apply' ) {
+            dir('Vorx_jenkins'){
                 // sh 'ls'
                 // sh 'cd Vorx_ec2'
                 // sh 'ls'
