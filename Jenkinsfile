@@ -17,20 +17,22 @@ stages {
 
   stage('TF Init&Plan') {
     steps {
+        dir('Vorx_jenkins'){
         script {
             if (params.TF_OPTION == 'apply' ) {
                 // sh 'ls'
                 // sh 'cd Vorx_ec2'
                 // sh 'ls'
-                sh 'terraform init ./Vorx_ec2'
-                sh 'terraform plan ./Vorx_ec2 -out=myplan.out'
+                sh 'terraform init'
+                sh 'terraform plan -out=myplan.out'
             }
             else {
                 // sh 'cd Vorx_ec2'
-                sh 'terraform init ./Vorx_ec2'
-                sh 'terraform plan ./Vorx_ec2 -destroy -out=myplan.out '
+                sh 'terraform init'
+                sh 'terraform plan -destroy -out=myplan.out '
             }
         }
+      }
     }      
   }
 
