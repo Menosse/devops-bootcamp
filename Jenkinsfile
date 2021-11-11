@@ -20,10 +20,12 @@ stages {
         script {
             if (params.TF_OPTION == 'apply' ) {
                 sh 'ls'
+                sh 'cd Vorx_ec2'
                 sh 'terraform init'
                 sh 'terraform plan -out=myplan.out'
             }
             else {
+                sh 'cd Vorx_ec2'
                 sh 'terraform init'
                 sh 'terraform plan -destroy -out=myplan.out'
             }
