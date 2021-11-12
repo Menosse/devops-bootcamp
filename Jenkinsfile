@@ -32,7 +32,7 @@ pipeline {
         }
         stage('Cleanup') {
 	        	steps {
-                // sudo rm -rf /home/ec2-user/jenkins-data/jenkins_home/workspace/vorx-backend-app-pipeline*
+                // sh 'sudo rm -rf /home/ec2-user/jenkins-data/jenkins_home/workspace/vorx-backend-app-pipeline*'
 			          sh './jenkins/build/mvn.sh mvn clean'
 			          deleteDir()
 		          }
