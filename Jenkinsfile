@@ -17,6 +17,7 @@ stages {
 
   stage('TF Init&Plan') {
     steps {
+      
         script {
             if (params.TF_OPTION == 'apply' ) {
                 sh 'terraform init'
