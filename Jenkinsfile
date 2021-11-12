@@ -3,6 +3,7 @@ pipeline {
     
     environment {
       PASS = credentials('registry-pass')
+      BUILD_TAG = 1
     }
  
     stages {
