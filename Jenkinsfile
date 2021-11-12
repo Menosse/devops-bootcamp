@@ -10,6 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
+                  echo $PASS
                    ./jenkins/build/mvn.sh mvn -B -DskipTests clean package
                    ./jenkins/build/build.sh
                 '''
