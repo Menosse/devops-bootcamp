@@ -6,7 +6,7 @@ echo "********************"
 IMAGE="maven-project"
 
 echo "** Logging in ***"
-docker login -u famcsn2 -p $PASS
+docker login -u "famcsn2" -p $PASS
 
 echo "*** Tagging image ***"
 # docker tag $IMAGE:$BUILD_TAG famcsn2/$IMAGE:$BUILD_TAGx
